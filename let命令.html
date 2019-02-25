@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/JavaScript">
+			/*
+				var与let的区别：
+				1. let定义的全局变量不会成为window属性
+				2. let定义的全局变量只在其定义的代码块内有效
+				3. var有变量提升功能，let没有，要求变量必须先声明再使用，否则报错
+				4. let变量不能在同一作用域中重复声明，否自报错
+			*/
+			// console.log(h); // error
+			console.log(typeof h);  //typeof 检测不存在的变量不会报错,但是是undefined
+			//console.log(typeof b);
+			//console.log(b);
+			let a = "hello"; //不会污染window 对象
+			var b = "world";
+			console.log(window);  //查看world 对象可以发现用var 定义的变量b已经绑定在window对象上了 而用let 定义的变量a没有绑定在window对象上
+			for(let i = 0;i < 10;i++){
+				console.log(i);
+			}
+			//console.log(i);   //此处发现变量i已经报错,证明了let定义的变量只在定义的块级作用域内有效
+			
+			
+		</script>
+	</body>
+</html>

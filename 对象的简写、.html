@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//对象中的属性和行为可以简写为
+// 			let user = {
+// 				uesrname: 'John',
+// 				age: 20
+// 			};
+			
+			let username = 'John';
+			let age = 20;
+			let user = {
+				username: username,
+				age: age
+			};
+			console.log(user.username,user.age);
+			console.log("------------------");
+			// 可以简写为
+			let user1 = {
+				username,
+				age
+			};
+			console.log(user1.username,user1.age);
+			
+			
+			//对象内部的方法也可以简写
+			let user2 = {
+				username,
+				age,
+				say() {
+					console.log("........");
+				}
+			}
+			
+			
+			//用class代替es5中使用构造函数模拟的类
+			class Person {
+				constructor(name,age) {  //类的构造器,在new时被调用
+					console.log("构造方法被调用");
+					this.name = name;
+					this.age = age;
+				}
+				
+				eat() {
+					console.log(`${this.name}正在吃螃蟹`);
+				}
+			}
+			
+			let p = new Person("张明",20);
+			p.eat();
+			
+			let Anmail = function A(type){
+				this.type = type;
+			};
+		</script>
+	</body>
+</html>

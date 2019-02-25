@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// get请求
+// 			fetch('http://localhost:4000',{
+// 				method: "get"
+// 			}).then(res => {
+// 				return res.json();
+// 			}, err => {
+// 				console.log(err);
+// 			}).then(data => console.log(data))
+			
+			//post请求
+// 			let u = {
+// 				username: "admin",
+// 				password: "123"
+// 			}
+// 			fetch('http://localhost:7000',{
+// 				method: "post",
+// 				body: JSON.stringify(u)
+// 			}).then(res => res.json(),err => console.log(err)).then(data => console.log(data));
+
+			// 
+			fetch("http://localhost:8888",{
+				method: "post",
+				body: "username:admin&password:123"
+			}).then(res => res.json(),err => console.log(err)).then(data => console.log(data));
+		</script>
+	</body>
+</html>

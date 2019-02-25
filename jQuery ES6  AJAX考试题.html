@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 1、$(this)和this在 jQuery 中有何不同
+			/*
+				$(this)指的是jQuery封装的当前对象，this指的是原生JavaScript封装的当前对象。
+			*/
+		   //  2、window或onload()事件和jQuery中的$(document).ready()有什么区别
+		   /*
+				两个方法有相似的功能，在执行时机方面是有区别的。
+				window.onload事件是在网页中所有元素(包括元素的所有的关联文件)完全加载后才执行，此时javascript才可以访问页面中的元素
+				$(document).ready()事件是在DOM完全就绪时就可以调用，此时页面中的所有元素对jQuery而言都是可以访问的。但这不代表页面中
+				的所有元素都已经加载完毕，这也造成一个问题，例如与图片有关的html下载完，并且已经解析问DOM树了，但很有可能图片还没有加载完成
+				以至图片的宽度和高度这样的属性不一定有效。要解决该问题，可以使用jQuery中的load()方法，该方法会在元素的onload实践中
+				绑定一个函数。
+		   */
+		  
+		</script>
+	</body>
+</html>

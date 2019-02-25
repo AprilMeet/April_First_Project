@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			class Person {
+				constructor(name,age) { //类的构造器,在new时被使用
+					console.log("构造时使用方法");
+					this.name = name;
+					this._age = age;
+					
+				}
+				
+				eat() {
+					console.log(this.name);
+					console.log(`${this._age}岁的${this.name}正在吃东西`);
+				}
+				
+				//使用setter函数队某个属性设置进行控制
+				set age(inputAge) {
+					if(inputAge < 150 && inputAge > 0){
+						this._age = inputAge;
+					}else{
+						this._age = 18;
+					}
+				}
+				
+				
+				//使用getter函数对某个属性获取进行控制
+				get age(){
+					return this._age + 2;
+				}
+			}
+			let t = new Person("小明",20);
+			t.age = 30;
+			t.name = "888";
+			t.eat();
+			console.log(t.age);
+		</script>
+	</body>
+</html>

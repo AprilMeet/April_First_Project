@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a = "hello"; //全局变量(自动绑定为window属性)
+			function fn() {
+				var a = "hi";
+				for (var i = 0; i < 5; i++) {     //全局函数(自动绑定为window函数) 并不是很合理
+					var h = "hello";     //ES5不存在块级作用域,此处定义的h变量在整个fn函数内有效
+					console.log("hello");
+				}
+				console.log(i);
+				console.log(h);
+				console.log(a);
+			}
+			fn();
+			console.log(window);
+		</script>
+	</body>
+</html>
